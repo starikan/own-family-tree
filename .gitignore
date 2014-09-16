@@ -4,3 +4,5 @@ client/dev
 *.sublime-project
 *.sublime-workspace
 build
+bower_components
+bower_libs

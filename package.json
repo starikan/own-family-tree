@@ -8,6 +8,11 @@
   },
   "author": "Starik <4analit@gmail.com>",
   "license": "GPLv2",
+  "browserify": {
+    "transform": [
+      "debowerify"
+    ]
+  },
   "devDependencies": {
     "gulp": "~3.5.2",
     "require-dir": "^0.1.0",
@@ -22,7 +27,9 @@
     "gulp-plumber": "^0.6.5",
     "gulp-webserver": "^0.8.0",
     "gulp-uglify": "^1.0.1",
-    "gulp-streamify": "0.0.5"
+    "gulp-streamify": "0.0.5",
+    "main-bower-files": "^2.0.0",
+    "debowerify": "^0.8.1"
   },
   "dependencies": {
     "jquery": "^2.1.1"

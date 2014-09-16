@@ -1,11 +1,7 @@
 'use strict';
 
-var angular = require('angular');
+require('angular');
 
-module.exports = function(){
-	var app = angular.module('app', []);
+var app = angular.module('app', []).controller("MainCtrl", ['$scope', function($scope) { 
 
-	app.controller("MainCtrl", ['$scope', '$http', function($scope, $http) { 
-
-	 }]);
-}
+ }]);

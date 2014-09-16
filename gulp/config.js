@@ -21,4 +21,8 @@ module.exports = {
     	host: 'localhost',
     	port: '12345',
     },
+    bower: {
+        folder: "bower-components",
+        dest: "bower_libs"
+    },
 }
