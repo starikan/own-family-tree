@@ -3,12 +3,12 @@ html
         meta(charset="UTF-8")
         title 
         link(rel="shortcut icon", href="images/favicon_256x256.png", type="image/png")
+        link(href="vendor.css", rel="stylesheet")
         link(href="main.css", rel="stylesheet")
 
     body(ng-controller="MainCtrl" ng-app="app" ng-cloak)
 
-        input(ng-model="test")
-        span {{test}}
+        include graph
         
         script(src="main.js")
 

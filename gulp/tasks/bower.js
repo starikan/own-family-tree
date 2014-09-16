@@ -17,6 +17,10 @@ gulp.task('bower-files', function() {
         .pipe(gulp.dest(config.bower.dest));
 });
 
+// gulp.task('bower-css', function() {
+//     return gulp.src(config.bower.dest + "/" + config.bower.css)
+//         .pipe(gulp.dest(config.bower.destcss));
+// });
 
 gulp.task('bower', function(cb) {
 	runSequence('bower-clean', 'bower-files', cb);

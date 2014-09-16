@@ -3,6 +3,7 @@ var path = require('path');
 var gulp   = require('gulp');
 var stylus = require("gulp-stylus");
 var prefix = require('gulp-autoprefixer');
+var concat = require('gulp-concat');
 
 var config = require('../config');
 
@@ -18,5 +19,11 @@ gulp.task('stylus', function() {
     .pipe(stylus())
         .on('error', console.log)
     .pipe(prefix("last 2 version", "> 1%", "ie 8", "ie 7"))
+    .pipe(gulp.dest(dest))
+ }); 
+
+gulp.task('vendor_css', function() {
+    gulp.src(config.bower.dest + "/" + config.bower.css)
+	.pipe(concat('vendor.css'))
     .pipe(gulp.dest(dest))
  }); 
