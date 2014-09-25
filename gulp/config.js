@@ -1,35 +1,41 @@
-module.exports = {
+var config = {
     build: {
-        folder: "build",
+        dest_folder: "build",
         jade: {
-            source: 'client/source/jade',
-            dest: "build",
-            files: ['index.jade']
+            files: ['client/source/jade/index.jade']
         },
         stylus: {
-            source: 'client/source/styl',
-            dest: "build",
-            files: ['main.styl']
+            files: ['client/source/styl/main.styl']
         },
         js: {
-            source: 'client/source/js',
-            dest: "build",
-            files: ['main.js']
+            main_file: './client/source/js/main.js',
+            file_name: "main.js",
         },
+        css: {
+            files: [
+                "bower_libs/bootstrap/dist/css/bootstrap.css",
+                "bower_libs/vis/dist/vis.min.css",
+                "bower_libs/ngDialog/css/ngDialog.css",
+                "bower_libs/ngDialog/css/ngDialog-theme-default.css",
+            ],
+            replace: [
+                ["../fonts/", ""]
+            ],
+        },
+        copy: {
+            files: [
+                "bower_libs/bootstrap/dist/fonts/**",
+            ],
+        }
     },
     server: {
         host: 'localhost',
         port: '12345',
     },
     bower: {
-        folder: "bower-components",
-        dest: "bower_libs",
-        css: [
-            "vis/dist/vis.min.css"
-        ],
-        other: [
-
-        ]
+        source_folder: "bower_components",
+        dest_folder: "bower_libs",
     },
 }
 
+module.exports = config;

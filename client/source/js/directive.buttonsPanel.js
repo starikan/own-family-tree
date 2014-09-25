@@ -3,24 +3,30 @@
 require("angular");
 require("./factory.data")
 
-function buttonsPanel() {
-    return {
-        restrict: 'E',
-        template: "<div class='buttonsPanel'><buttons-add-persone></buttons-add-persone></div>",
-        replace: true,
-        // transclude: true,
-    }
-}
 
-function buttonsAddPersone($window, data) {
+function buttonsAddPersone($rootScope, data) {
     return {
         restrict: 'E',
-        template: "<div>321</div>",
+        template: "<button>+</button>",
         replace: true,
         scope: {
             // options: "&",
         },
-        link: function(scope, elm) {
+        link: function(scope, elem) {
+            elem.on('click', function(){console.log(123321)})
+        }
+    }
+}
+
+function buttonsRemovePersone($rootScope, data) {
+    return {
+        restrict: 'E',
+        template: "<button>-</button>",
+        replace: true,
+        scope: {
+            // options: "&",
+        },
+        link: function(scope, elem) {
 
         }
     }
@@ -28,5 +34,5 @@ function buttonsAddPersone($window, data) {
 
 module.exports = angular
     .module('directive.buttonsPanel', ['factory.data'])
-    .directive('buttonsPanel', buttonsPanel)
-    .directive('buttonsAddPersone', [ '$window', 'data', buttonsAddPersone ])
+    .directive('buttonsAddPersone', [ '$rootScope', 'data', buttonsAddPersone ])
+    .directive('buttonsRemovePersone', [ '$rootScope', 'data', buttonsRemovePersone ])

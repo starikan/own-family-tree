@@ -6,21 +6,19 @@ var runSequence = require('gulp-run-sequence');
 var config = require('../config');
 
 gulp.task('bower-clean', function() {
-    return gulp.src(config.bower.dest, {
+    return gulp.src(config.bower.dest_folder, {
             read: false
         })
         .pipe(clean());
 });
 
 gulp.task('bower-files', function() {
-    return gulp.src(bowerFiles(), { base: 'bower_components' })
-        .pipe(gulp.dest(config.bower.dest));
-});
 
-// gulp.task('bower-css', function() {
-//     return gulp.src(config.bower.dest + "/" + config.bower.css)
-//         .pipe(gulp.dest(config.bower.destcss));
-// });
+    console.log(config.bower.source_folder)
+
+    return gulp.src(bowerFiles(), { base: config.bower.source_folder })
+        .pipe(gulp.dest(config.bower.dest_folder));
+});
 
 gulp.task('bower', function(cb) {
 	runSequence('bower-clean', 'bower-files', cb);
