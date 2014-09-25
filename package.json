@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "description": "",
   "main": "",
+  "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -14,25 +15,24 @@
     ]
   },
   "devDependencies": {
-    "gulp": "~3.5.2",
-    "require-dir": "^0.1.0",
-    "gulp-run-sequence": "^0.3.2",
-    "gulp-clean": "~0.2.4",
-    "gulp-jade": "~0.4.2",
-    "gulp-stylus": "0.0.13",
-    "gulp-autoprefixer": "0.0.6",
     "browserify": "^5.11.2",
-    "vinyl-source-stream": "^1.0.0",
-    "opn": "^1.0.0",
-    "gulp-plumber": "^0.6.5",
-    "gulp-webserver": "^0.8.0",
-    "gulp-uglify": "^1.0.1",
-    "gulp-streamify": "0.0.5",
-    "main-bower-files": "^2.0.0",
     "debowerify": "^0.8.1",
+    "gulp": "~3.8.8",
+    "gulp-autoprefixer": "0.0.6",
+    "gulp-clean": "~0.2.4",
     "gulp-concat": "^2.4.0",
-    "watchify": "^1.0.2",
-    "gulp-util": "^3.0.1"
+    "gulp-connect": "^2.0.6",
+    "gulp-jade": "~0.4.2",
+    "gulp-run-sequence": "^0.3.2",
+    "gulp-streamify": "0.0.5",
+    "gulp-stylus": "0.0.13",
+    "gulp-uglify": "^1.0.1",
+    "gulp-util": "^3.0.1",
+    "main-bower-files": "^2.0.0",
+    "opn": "^1.0.0",
+    "require-dir": "^0.1.0",
+    "vinyl-source-stream": "^1.0.0",
+    "watchify": "~1.0.0"
   },
   "dependencies": {
     "jquery": "^2.1.1"
